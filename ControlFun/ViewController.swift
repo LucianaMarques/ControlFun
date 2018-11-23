@@ -19,12 +19,12 @@ class ViewController: UIViewController {
     
     @IBAction func textFiedDoneEditind(sender: UITextField)
     {
-        sender.resignFirstResponder()   
+        sender.resignFirstResponder()
     }
     
-
-    
-
-
+    @IBAction func onTapGestureRecognized(_ sender: Any) {
+        nameField.resignFirstResponder()
+        numberField.resignFirstResponder()
+    }
 }
 
