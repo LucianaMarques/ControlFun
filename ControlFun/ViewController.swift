@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var sliderLabel: UILabel!
+    @IBOutlet weak var leftSwitch: UISwitch!
+    @IBOutlet weak var rightSwitch: UISwitch!
     
     @IBOutlet weak var numberField: UITextField!
     override func viewDidLoad() {
@@ -31,6 +33,11 @@ class ViewController: UIViewController {
     @IBAction func onSliderChanged(_ sender: UISlider) {
         sliderLabel.text = "\(lroundf(sender.value))"
         
+    }
+    @IBAction func onSwitchChanged(_ sender: UISwitch) {
+        let setting = sender.isOn
+        leftSwitch.setOn(setting, animated: true)
+        rightSwitch.setOn(setting, animated: true)
     }
 }
 
