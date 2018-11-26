@@ -68,7 +68,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mg-um-gLn">
                                 <rect key="frame" x="20" y="395" width="29" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="29" id="RbO-Wh-niT"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="29" id="RbO-Wh-niT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -93,9 +93,13 @@
                                     <action selector="onSwitchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Z28-J5-Bn9"/>
                                 </connections>
                             </switch>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7e-Nq-xX0">
-                                <rect key="frame" x="20" y="537" width="374" height="30"/>
-                                <state key="normal" title="Do Something"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7e-Nq-xX0">
+                                <rect key="frame" x="20" y="537" width="374" height="31"/>
+                                <state key="normal" title="Do Something" backgroundImage="whiteButton"/>
+                                <state key="highlighted" backgroundImage="blueButton"/>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LDf-f1-Qmn"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -108,11 +112,12 @@
                             <constraint firstItem="uY9-u1-ah2" firstAttribute="centerY" secondItem="3De-ks-Tje" secondAttribute="centerY" id="EQG-7R-OPG"/>
                             <constraint firstItem="Xw2-aN-UVI" firstAttribute="top" secondItem="3De-ks-Tje" secondAttribute="bottom" constant="33" id="GAN-te-V0H"/>
                             <constraint firstItem="l4p-mx-yUy" firstAttribute="trailing" secondItem="Ebh-1D-hBv" secondAttribute="trailing" id="IAu-U2-3R4"/>
-                            <constraint firstItem="P7e-Nq-xX0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="493" id="LAO-7f-gf7"/>
                             <constraint firstItem="3De-ks-Tje" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="NSl-gB-Oqn"/>
+                            <constraint firstItem="P7e-Nq-xX0" firstAttribute="top" secondItem="l4p-mx-yUy" secondAttribute="top" id="Nh1-nT-fGo"/>
                             <constraint firstItem="uY9-u1-ah2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Oas-Zl-obL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EJj-DJ-vT0" secondAttribute="bottom" constant="294" id="Osy-Ob-xsx"/>
                             <constraint firstItem="3De-ks-Tje" firstAttribute="leading" secondItem="Xw2-aN-UVI" secondAttribute="leading" id="SSt-xZ-pSa"/>
+                            <constraint firstItem="P7e-Nq-xX0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Txb-0z-qmU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oWi-RV-Ngm" secondAttribute="bottom" constant="525" id="Us2-3H-cmp"/>
                             <constraint firstItem="iyP-KW-acb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="426" id="VIT-hu-R0j"/>
                             <constraint firstItem="oWi-RV-Ngm" firstAttribute="top" secondItem="uY9-u1-ah2" secondAttribute="bottom" constant="42" id="Vgr-68-UUB"/>
@@ -129,11 +134,15 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EJj-DJ-vT0" secondAttribute="trailing" constant="345" id="rIf-W2-XoK"/>
                             <constraint firstItem="oWi-RV-Ngm" firstAttribute="width" secondItem="uY9-u1-ah2" secondAttribute="width" id="tUp-c1-iD8"/>
                             <constraint firstItem="oWi-RV-Ngm" firstAttribute="centerY" secondItem="Xw2-aN-UVI" secondAttribute="centerY" id="ur3-Mq-bHe"/>
+                            <constraint firstItem="P7e-Nq-xX0" firstAttribute="leading" secondItem="EJj-DJ-vT0" secondAttribute="leading" id="wcX-ti-P4q"/>
                             <constraint firstItem="5tx-1y-bpZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="72" id="wwg-2p-lyN"/>
+                            <constraint firstItem="P7e-Nq-xX0" firstAttribute="centerY" secondItem="EJj-DJ-vT0" secondAttribute="centerY" id="xnb-c8-lEd"/>
+                            <constraint firstItem="Xw2-aN-UVI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="oWi-RV-Ngm" secondAttribute="trailing" constant="8" symbolic="YES" id="z8G-Dr-9Hd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="doSomethingButton" destination="P7e-Nq-xX0" id="hLW-Lo-301"/>
                         <outlet property="leftSwitch" destination="EJj-DJ-vT0" id="fe5-kZ-SSo"/>
                         <outlet property="nameField" destination="3De-ks-Tje" id="Aua-mj-gES"/>
                         <outlet property="numberField" destination="Xw2-aN-UVI" id="Qj7-E3-lPC"/>
@@ -147,5 +156,7 @@
     </scenes>
     <resources>
         <image name="apress_logo" width="172" height="80"/>
+        <image name="blueButton" width="29" height="37"/>
+        <image name="whiteButton" width="29" height="38"/>
     </resources>
 </document>
