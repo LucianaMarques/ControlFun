@@ -50,14 +50,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ebh-1D-hBv">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Ebh-1D-hBv">
                                 <rect key="frame" x="55" y="391" width="341" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="337" id="YRk-Df-mNK"/>
                                 </constraints>
                                 <connections>
                                     <action selector="onSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="K99-8C-hVJ"/>
-                                    <action selector="toggleControls:" destination="BYZ-38-t0r" eventType="valueChanged" id="Es6-K7-qEx"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mg-um-gLn">
@@ -75,6 +74,9 @@
                                     <segment title="Switches"/>
                                     <segment title="Button"/>
                                 </segments>
+                                <connections>
+                                    <action selector="toggleControls:" destination="BYZ-38-t0r" eventType="valueChanged" id="dlh-nM-fvD"/>
+                                </connections>
                             </segmentedControl>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EJj-DJ-vT0">
                                 <rect key="frame" x="20" y="537" width="51" height="31"/>

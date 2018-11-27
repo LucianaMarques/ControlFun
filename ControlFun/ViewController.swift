@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var sliderLabel: UILabel!
     @IBOutlet weak var leftSwitch: UISwitch!
     @IBOutlet weak var rightSwitch: UISwitch!
-    
     @IBOutlet weak var doSomethingButton: UIButton!
     @IBOutlet weak var numberField: UITextField!
     override func viewDidLoad() {
