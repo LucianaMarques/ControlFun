@@ -13,12 +13,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var sliderLabel: UILabel!
     @IBOutlet weak var leftSwitch: UISwitch!
     @IBOutlet weak var rightSwitch: UISwitch!
+    
     @IBOutlet weak var doSomethingButton: UIButton!
     @IBOutlet weak var numberField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         sliderLabel.text = "50"
+        nameField.isUserInteractionEnabled = true
+        numberField.isUserInteractionEnabled = true
     }
     
     @IBAction func textFiedDoneEditind(sender: UITextField)
@@ -63,6 +66,7 @@ class ViewController: UIViewController {
             ppc.sourceView = sender
             ppc.sourceRect = sender.bounds
         }
+        
         present(controller, animated: true, completion: nil)
         
     }
