@@ -137,6 +137,9 @@
                             <constraint firstItem="Xw2-aN-UVI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="oWi-RV-Ngm" secondAttribute="trailing" constant="8" symbolic="YES" id="z8G-Dr-9Hd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Q0m-HG-4DU" appends="YES" id="jTK-MC-Aiv"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="doSomethingButton" destination="P7e-Nq-xX0" id="hLW-Lo-301"/>
